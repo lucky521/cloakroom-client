@@ -9,8 +9,13 @@ import {
   Button,
   Alert,
   StatusBar,
-  Navigator
+  Navigator,
 } from 'react-native';
+
+import BadInstagramCloneApp from './camera';
+
+
+
 
 
 export default class cloakroomclient extends Component {
@@ -18,10 +23,12 @@ export default class cloakroomclient extends Component {
   render() {
 
     let pic = {
-      uri: 'http://localhost/image/restapi/get/977e65f6f1f429a201e05a7ccfe922ed'
+      uri: 'http://10.117.173.109/image/restapi/get/982b6a09ade241f665dc3faaaf6187d1'
     };
 
+
     const onPressLearnMore = () => {
+
         Alert.alert('Button has been pressed!');
     };
 
@@ -43,6 +50,10 @@ export default class cloakroomclient extends Component {
           color="#841584"
           accessibilityLabel="Learn more about this purple button"/>
       </View>
+
+      <BadInstagramCloneApp>
+      </BadInstagramCloneApp>
+
 
         <ScrollView>
           <Text style={{fontSize:96}}>Scroll me plz</Text>
@@ -103,4 +114,3 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('cloakroomclient', () => cloakroomclient);
