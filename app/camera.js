@@ -12,7 +12,7 @@ import {
 
 import Camera from 'react-native-camera';
 
-export default class BadInstagramCloneApp extends Component {
+export default class UploadInstantPhoto extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -45,12 +45,13 @@ export default class BadInstagramCloneApp extends Component {
 
     if(PicturePath)
     {
-      fetch("http://10.117.173.109/image/restapi/post", config)
+      fetch("http://localhost/image/restapi/post", config)
       .then((responseData) => {
           console.log("###############responseData is ")
           console.log(responseData);
       })
       .catch(err => {
+        // what if network is down
         console.log(err);
       });
     }
@@ -71,12 +72,12 @@ export default class BadInstagramCloneApp extends Component {
         PicturePath = data.path;
         Alert.alert('Picture taken done.');
         // upload picture in then!
-        this.uploadPicture(PicturePath);  
+        this.uploadPicture(PicturePath);
       })
       .catch(err => console.error(err));
 
   }
-  
+
 }
 
 const styles = StyleSheet.create({
@@ -98,4 +99,3 @@ const styles = StyleSheet.create({
     margin: 40
   }
 });
-

@@ -12,10 +12,7 @@ import {
   Navigator,
 } from 'react-native';
 
-import BadInstagramCloneApp from './camera';
-
-
-
+import UploadInstantPhoto from './camera';
 
 
 export default class cloakroomclient extends Component {
@@ -23,9 +20,8 @@ export default class cloakroomclient extends Component {
   render() {
 
     let pic = {
-      uri: 'http://10.117.173.109/image/restapi/get/982b6a09ade241f665dc3faaaf6187d1'
+      uri: 'http://localhost/image/restapi/get/982b6a09ade241f665dc3faaaf6187d1'
     };
-
 
     const onPressLearnMore = () => {
 
@@ -51,8 +47,8 @@ export default class cloakroomclient extends Component {
           accessibilityLabel="Learn more about this purple button"/>
       </View>
 
-      <BadInstagramCloneApp>
-      </BadInstagramCloneApp>
+      <UploadInstantPhoto>
+      </UploadInstantPhoto>
 
 
         <ScrollView>
@@ -74,13 +70,13 @@ export default class cloakroomclient extends Component {
           <Image source={require('./image/favicon.png')} />
           <Image source={require('./image/favicon.png')} />
           <Image source={require('./image/favicon.png')} />
-          <Text style={{fontSize:96}}>What's the best</Text>
+          <Text style={{fontSize:96}}>Whats the best</Text>
           <Image source={require('./image/favicon.png')} />
           <Image source={require('./image/favicon.png')} />
           <Image source={require('./image/favicon.png')} />
           <Image source={require('./image/favicon.png')} />
           <Image source={require('./image/favicon.png')} />
-          <Text style={{fontSize:96}}>Framework around?</Text>
+          <Text style={{fontSize:96}}>Framework around</Text>
           <Image source={require('./image/favicon.png')} />
           <Image source={require('./image/favicon.png')} />
           <Image source={require('./image/favicon.png')} />
@@ -113,4 +109,3 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
-
